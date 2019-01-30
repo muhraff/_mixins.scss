@@ -1,3 +1,14 @@
-.sass-cache/
-*.css.map
+# Packages
 /node_modules
+/vendor
+/packages
+
+# OSX Specific
+.DS_Store
+
+# IDE Specific
+.sass-cache/
+.idea/
+*.css.map
+*.xml
+.idea/workspace.xml
