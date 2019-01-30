@@ -1,0 +1,32 @@
+// Variables
+
+// Color system
+$bb-black: #1D1D1D;
+$bb-white: #fff;
+
+
+
+$primary:       $bb-white !default;
+$secondary:     $bb-black !default;
+
+
+//icomoon
+$icomoon-font-path: "../fonts" !default;
+
+// Body
+$body-bg:         $bb-black !default;
+$body-color:      $bb-white !default;
+
+// Navbar
+$navbar-nav-link-padding-x:         1rem !default;
+
+// Carousel
+
+$carousel-control-color:             $bb-black !default;
+$carousel-control-width:             60px !default;
+$carousel-control-opacity:           1 !default;
+$carousel-control-hover-opacity:     1 !default;
+$carousel-control-transition:        opacity .15s ease !default;
+
+$carousel-caption-width:             70% !default;
+$carousel-caption-color:             $bb-white !default;

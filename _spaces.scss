@@ -1,0 +1,146 @@
+@mixin spaces($size: null, $type: normal, $direction: positive) {
+  $space: 8;
+  @if($size == 'extraSmall') {
+
+  } @elseif ($size == 'small') {
+    $space: $space * 3;
+  } @elseif ($size == 'medium') {
+    $space: $space * 5;
+  } @elseif ($size == 'mediumLarge') {
+    $space: $space * 9;
+  } @elseif ($size == 'large') {
+    $space: $space * 15;
+  } @elseif ($size == 'extraLarge') {
+    $space: $space * 20;
+  } @elseif ($size == 'superLarge') {
+    $space: $space * 50;
+  }
+
+  @if($direction == 'negative') {
+    $space: - $space;
+  }
+
+  @include media-breakpoint-down(md) {
+    $space: $space / 2;
+  }
+
+  @if($type == 'top' or $type == 'full' or $type == 'top-bottom') {
+    margin-top: calculateRem($space);
+
+    @include media-breakpoint-up(sm) {
+      margin-top: calculateRem($space);
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-top: calculateRem($space);
+    }
+  }
+
+  @if($type == 'side' or $type == 'full' or $type == 'right') {
+    margin-right: calculateRem($space);
+
+    @include media-breakpoint-up(sm) {
+      margin-right: calculateRem($space);
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-right: calculateRem($space);
+    }
+  }
+
+  @if($type == 'bottom' or $type == 'full' or $type == 'top-bottom') {
+    margin-bottom: calculateRem($space);
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: calculateRem($space);
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: calculateRem($space);
+    }
+  }
+
+  @if($type == 'side' or $type == 'full' or $type == 'left') {
+    margin-left: calculateRem($space);
+
+    @include media-breakpoint-up(sm) {
+      margin-left: calculateRem($space);
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-left: calculateRem($space);
+    }
+  }
+}
+
+@mixin paddings($size: null, $type: normal) {
+  $space: 8;
+
+  @if($size == 'extraSmall') {
+
+  } @elseif ($size == 'small') {
+    $space: $space * 3;
+  } @elseif ($size == 'medium') {
+    $space: $space * 5;
+  } @elseif ($size == 'mediumLarge') {
+    $space: $space * 9;
+  } @elseif ($size == 'large') {
+    $space: $space * 15;
+  } @elseif ($size == 'extraLarge') {
+    $space: $space * 20;
+  } @elseif ($size == 'superLarge') {
+    $space: $space * 50;
+  }
+
+  @include media-breakpoint-down(md) {
+    $space: $space / 2;
+  }
+
+  @if($type == 'top' or $type == 'full' or $type == 'top-bottom') {
+    padding-top: calculateRem($space/3);
+
+    @include media-breakpoint-up(sm) {
+      padding-top: calculateRem($space/2);
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-top: calculateRem($space);
+    }
+  }
+
+  @if($type == 'side' or $type == 'full' or $type == 'right') {
+    padding-right: calculateRem($space/3);
+
+    @include media-breakpoint-up(sm) {
+      padding-right: calculateRem($space/2);
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-right: calculateRem($space);
+    }
+  }
+
+  @if($type == 'bottom' or $type == 'full' or $type == 'top-bottom') {
+    padding-bottom: calculateRem($space/3);
+
+    @include media-breakpoint-up(sm) {
+      padding-bottom: calculateRem($space/2);
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-bottom: calculateRem($space);
+    }
+  }
+
+  @if($type == 'side' or $type == 'full' or $type == 'left') {
+    padding-left: calculateRem($space/3);
+
+    @include media-breakpoint-up(sm) {
+      padding-left: calculateRem($space/2);
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-left: calculateRem($space);
+    }
+  }
+}
